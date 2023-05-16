@@ -10,7 +10,7 @@ The third script, `generate-dataset.py`, reads the filtered articles and cleans 
 
 ## Get started
 
-The English Wikipedia datadump : [Torrent file](https://tnt.toolforge.org/torrents/enwiki-20230401-pages-articles-multistream.xml.bz2.torrent) [List of ther torrents](https://meta.wikimedia.org/wiki/Data_dump_torrents#English_Wikipedia)
+The English Wikipedia datadump : \[[Torrent file](https://tnt.toolforge.org/torrents/enwiki-20230401-pages-articles-multistream.xml.bz2.torrent)\] \[[List of other torrents](https://meta.wikimedia.org/wiki/Data_dump_torrents#English_Wikipedia)\]
 
 To install the required packages, run:
 
