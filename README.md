@@ -8,9 +8,9 @@ The second script, `process-pageviews.py`, filters out unwanted articles based o
 
 The third script, `generate-dataset.py`, reads the filtered articles and cleans them up to create a JSON file with a structured format. The script removes unwanted text, formats and converts units, and removes odd characters and symbols. The resulting JSON file contains a list of articles with their titles and contents.
 
-## Downloading premade datasets
+## Premade datasets
 
-Some datasets that are generated using this repo can be found on my Hugging Face account \((ThomasBaruzier/wikipedia)[https://huggingface.co/datasets/ThomasBaruzier/wikipedia]\).
+I uploaded a dataset on Hugging Face using this project : [ThomasBaruzier/wikipedia](https://huggingface.co/datasets/ThomasBaruzier/wikipedia).
 
 ## Get started
 
