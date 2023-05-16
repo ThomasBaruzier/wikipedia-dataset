@@ -1,23 +1,16 @@
 # Wikipedia Dataset Generator
 
-You have now crontrol over the balance between the article quality and the size of the dataset. This means that you can generate a small dataset of very high quality articles, a large dataset of mixed qulality article, or decide your own balance.
+You have now total control over the balance between the article quality and the size of your own Wikipedia dataset. This means that you can generate a small dataset of very high quality articles, a large dataset of mixed qulality article, or decide your own balance.
 
-With the first script, `download-pageviews.py`, you can automatically download pageviews files from the Wikimedia servers. But what are pageviews, you may ask. It's a database of over 8 years of wikipedia page views statitics that is precise down to the hour. From this set of files, you can estimate the popularity and quality of the articles you want to include in your own dataset. If you want your language model to know about the latest events, select a range of recent start and stop dates. Need somthing more flexible and reliable? You can use the 8 years of statistics for yourself.
+With the first script, `download-pageviews.py`, you can automatically download pageview files from the Wikimedia servers. But what are pageviews, you may ask. It's a database of over 8 years of wikipedia page views statitics that is precise down to the hour. From this set of files, you can estimate the popularity and quality of the articles you want to include in your own dataset. If you want your language model to know about the latest events, select a range of recent start (-s) and end (-e) dates. Need something more flexible and reliable? You can use the 8 years of statistics for yourself.
 
 The second script, `process-pageviews.py`, filters out unwanted articles based on specific criterias, such as excluding articles based on their title, or most importantly their popularity. In addition, this parameter is calculated by making the averages of all the pageview files you downloaded, allowing very high realiability.
 
 The third script, `generate-dataset.py`, reads the filtered articles and cleans them up to create a JSON file with a structured format. The script removes unwanted text, formats and converts units, and removes odd characters and symbols. The resulting JSON file contains a list of articles with their titles and contents.
 
-## Requirements
+## Get started
 
-- Python 3.x
-- `requests`
-- `tqdm`
-- `beautifulsoup4`
-- `bz2file`
-- `nltk`
-
-- The English Wikipedia datadump : [Torrent file](https://tnt.toolforge.org/torrents/enwiki-20230401-pages-articles-multistream.xml.bz2.torrent) [List of torrents](https://meta.wikimedia.org/wiki/Data_dump_torrents#English_Wikipedia)
+The English Wikipedia datadump : [Torrent file](https://tnt.toolforge.org/torrents/enwiki-20230401-pages-articles-multistream.xml.bz2.torrent) [List of ther torrents](https://meta.wikimedia.org/wiki/Data_dump_torrents#English_Wikipedia)
 
 To install the required packages, run:
 
@@ -63,7 +56,7 @@ You can CTRL+C whenever you want, the JSON file will still be valid, but there's
 
 - Tested for the english Wikipedia dump only.
 - Removes equations and other compilcated stuff such as foreign languages tranductions.
-- I have fought hard to keep the error rate low, but it still fails, sometimes. The common error is associated with the filtering of complex structures, leaving non-sence sentences here and there.
+- I fought hard to keep the error rate low, but it still fails, sometimes. The common error is associated with the filtering of complex structures, leaving non-sence sentences here and there.
 - You need to download the dump by yourself using a torrenting client.
 
 ## Example of generated data
